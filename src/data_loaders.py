@@ -52,4 +52,6 @@ def load_data(filepath):
     elif suffix in (".yaml", ".yml"):
         return load_yaml(path)
     else:
-        raise ValueError(f"Unsupported file type '{suffix}' for {path}")
+        message = f"Unsupported file type '{suffix}' for {path}"
+        logger.error(message)
+        raise ValueError(message)
