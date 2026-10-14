@@ -10,3 +10,12 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+output/
+
+# Virtual environment
+venv/
+
+# Markdown notes stay local (README.md is required by Part 4, so it is kept)
+*.md
+!README.md

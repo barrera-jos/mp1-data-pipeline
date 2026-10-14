@@ -1,13 +1,24 @@
-processing:
-  remove_duplicates: true
+validation:
+  required_columns:
+    - record_id
+    - name
+    - rating
+    - category
+    - status
+  numeric_columns:
+    - rating
 
-  missing:
+processing:
+  remove_duplicates:
+    enabled: true
+
+  handle_missing:
     enabled: true
     axis: "rows"
 
-  outliers:
+  remove_outliers:
     enabled: true
     columns:
-      - Score
+      - rating
     method: "iqr"
     threshold: 1.5
